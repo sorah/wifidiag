@@ -1,0 +1,57 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  text-align: center;
+}
+
+code, pre {
+  font-family: "Source Code Pro", "Monaco", monospace;
+}
+
+#container {
+  text-align: left;
+  width: 100%;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#container > footer {
+  text-align: center;
+}
+
+.text-muted {
+  font-size: 80%;
+  color: gray;
+}
+
+.hide {
+  display: none;
+}
+
+#report {
+  text-align: center;
+}
+#measuring {
+  font-weight: bold;
+  font-size: 20pt;
+}
+#report_form {
+  text-align: center;
+}
+#report_form p {
+  font-size: 10pt;
+}
+#report_form button {
+  background-color: #337AB7;
+  color: white;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 28pt;
+  padding: 10px 30px;
+  font-weight: 100;
+  margin-right: 12px;
+}
+#report_form button:hover {
+  background-color: #286090;
+}

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="/index.css">
+    <% if conf[:edge_url] %>
+    <meta name="wifidiag-edge" content="<%= conf[:edge_url] %>">
+  <% end %>
+    <title>Wifidiag</title>
+  </head>
+  <body>
+    <div id="container">
+      <header>
+        <h1>Wi-Fi Diagnostics</h1>
+      </header>
+
+      <section id="report">
+        <p id="measuring">...Measuring...</p>
+        <form id='report_form' class='hide'>
+          <button type='submit'>Report</button>
+          <p>(Click to report, or copy the following Diagnostics data)</p>
+        </form>
+      </section>
+
+      <section id="basic_data">
+        <% if @client %>
+          <code><pre><%= JSON.pretty_generate(@client.to_h) %></pre></code>
+          <% else %>
+            <p>We couldn't find your client info by your address <%= client_ip %>.</p>
+          <% end %>
+      </section>
+      <section id="advanced_data">
+        <code><pre id="advanced_data_pre"></pre></code>
+      </section>
+
+      <footer>
+        <p class="text-muted">Powered by <a href="https://github.com/sorah/wifidiag">sorah/wifidiag</a></p>
+      </footer>
+    </div>
+    <script src="/index.js"></script>
+  </body>
+</html>
