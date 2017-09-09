@@ -12,6 +12,7 @@ config =   Wifidiag::Config.new(
     ) : nil,
   ].compact,
   dummy_ip: ENV['WIFIDIAG_DUMMY_IP'],
+  edge_url: ENV['WIFIDIAG_EDGE_URL'],
 )
 
 config.collector.start_periodic_update(60)
